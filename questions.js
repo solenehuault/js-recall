@@ -10,7 +10,15 @@ var selectElementsStartingWithA = function(array) {
 }
 
 var selectElementsStartingWithVowel = function(array) {
-    return 'Write your method here';
+    var result = [];	
+	for (var i = 0 ; i < array.length ; i++) {
+		var first_letter = array[i].toLowerCase().charAt(0);
+		if (first_letter === 'a' || first_letter === 'e' || first_letter === 'i' || first_letter === 'o' 
+		|| first_letter === 'u' || first_letter === 'y') {
+			result.push(array[i]);
+		}
+	}    
+	return result;
 }
 
 var removeNullElements = function(array) {
