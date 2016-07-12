@@ -189,7 +189,7 @@ var removeCapitals = function(string) {
 }
 
 var roundUp = function(number) {
-    return Math.ceil(number);
+	return Math.ceil(number);
 }
 
 var formatDateNicely = function(date) {
@@ -209,11 +209,16 @@ var checkForSpecialCharacters = function(string) {
 }
 
 var squareRoot = function(number) {
-    return Math.sqrt(number);
+	return Math.sqrt(number);
 }
 
 var factorial = function(number) {
-    return 'Write your method here';
+	var result = 1;
+	if (number === 0) {return result;}
+	for (i = 1 ; i <= number ; i++) {
+		result *= i;
+	}
+	return result;
 }
 
 var findAnagrams = function(string) {
