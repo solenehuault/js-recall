@@ -22,7 +22,13 @@ var selectElementsStartingWithVowel = function(array) {
 }
 
 var removeNullElements = function(array) {
-    return 'Write your method here';
+	var result = [];
+	for (var i = 0 ; i < array.length ; i++) {
+		if (array[i] != null) {
+			result.push(array[i]);
+		}
+	}     
+	return result;
 }
 
 var removeNullAndFalseElements = function(array) {
