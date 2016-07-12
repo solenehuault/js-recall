@@ -120,7 +120,11 @@ var longestWord = function(array) {
 }
 
 var sumNumbers = function(array) {
-    return 'Write your method here';
+	var result = array[0];
+	for (i = 1 ; i < array.length ; i++) {
+		result = result + array[i];
+	}    
+	return result;
 }
 
 var repeatElements = function(array) {
