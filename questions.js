@@ -128,7 +128,11 @@ var sumNumbers = function(array) {
 }
 
 var repeatElements = function(array) {
-    return 'Write your method here';
+	var taille = array.length;
+	for (i = 0 ; i < taille ; i++) {
+		array.push(array[i]);
+	}    
+	return array;
 }
 
 var stringToNumber = function(string) {
