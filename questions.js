@@ -42,7 +42,11 @@ var removeNullAndFalseElements = function(array) {
 }
 
 var reverseWordsInArray = function(array) {
-    return 'Write your method here';
+	var result = [];
+	for (var i = 0 ; i < array.length ; i++) {
+		result.push(array[i].split("").reverse().join(""));
+	}    
+	return result;
 }
 
 var everyPossiblePair = function(array) {
