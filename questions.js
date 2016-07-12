@@ -50,7 +50,19 @@ var reverseWordsInArray = function(array) {
 }
 
 var everyPossiblePair = function(array) {
-    return 'Write your method here';
+	var result = [];
+	for (var i = 0 ; i < array.length ; i++) {
+		var paire = [];
+		paire.push(array[i]);
+		if (i == array.length-1) {		
+			paire.push(array[0]);
+		}
+		else { 
+			paire.push(array[i+1]);
+		}
+		result.push(paire.sort());
+	}
+	return result.sort();
 }
 
 var allElementsExceptFirstThree = function(array) {
