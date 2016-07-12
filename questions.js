@@ -160,11 +160,20 @@ var getElementsUntilGreaterThanFive = function(array) {
 }
 
 var convertArrayToObject = function(array) {
-    return 'Write your method here';
+	var result = [];
+	for (i = 0 ; i < array.length-1 ; i += 2) {
+		result[array[i]] = array[i+1];
+	}    
+	return result;
 }
 
 var getAllLetters = function(array) {
-    return 'Write your method here';
+	var listeChar = [];
+	for (var i = 0 ; i < array.length ; i++) {
+		var index = array[i];
+		listeChar[index] = "Coucou Toto !";
+	}
+	return listeChar;
 }
 
 var swapKeysAndValues = function(object) {
@@ -180,7 +189,7 @@ var removeCapitals = function(string) {
 }
 
 var roundUp = function(number) {
-    return 'Write your method here';
+    return Math.ceil(number);
 }
 
 var formatDateNicely = function(date) {
