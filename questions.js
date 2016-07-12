@@ -136,11 +136,15 @@ var repeatElements = function(array) {
 }
 
 var stringToNumber = function(string) {
-    return parseInt(string);
+	return parseInt(string);
 }
 
 var calculateAverage = function(array) {
-    return 'Write your method here';
+	var result = array[0];
+	for (i = 1 ; i < array.length ; i++) {
+		result = result + array[i];
+	}
+	return (result / array.length);
 }
 
 var getElementsUntilGreaterThanFive = function(array) {
