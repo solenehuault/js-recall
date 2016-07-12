@@ -32,7 +32,13 @@ var removeNullElements = function(array) {
 }
 
 var removeNullAndFalseElements = function(array) {
-    return 'Write your method here';
+	var result = [];
+	for (var i = 0 ; i < array.length ; i++) {
+		if (array[i] != null && array[i] !== false) {
+			result.push(array[i]);
+		}
+	}     
+	return result;
 }
 
 var reverseWordsInArray = function(array) {
