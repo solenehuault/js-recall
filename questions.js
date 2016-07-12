@@ -76,7 +76,8 @@ var addElementToBeginning = function(array, element) {
 }
 
 var sortByLastLetter = function(array) {
-    return 'Write your method here';
+	return array.sort(function(a,b) {
+		return a.charAt(a.length-1) - b.charAt(b.length-1);});
 }
 
 var getFirstHalf = function(string) {
@@ -84,15 +85,28 @@ var getFirstHalf = function(string) {
 }
 
 var makeNegative = function(number) {
-    return 'Write your method here';
+	if (number <= 0) {return number;}
+	else {return number-(2*number)};
 }
 
 var numberOfPalindromes = function(array) {
-    return 'Write your method here';
+	var result = 0;
+	for (i = 0 ; i < array.length ; i++) {
+		if (array[i].split("").reverse().join("") === array[i]) {
+			result++;
+		}
+	}    
+	return result;
 }
 
 var shortestWord = function(array) {
-    return 'Write your method here';
+	var small = array[0];
+	for (i = 1 ; i < array.length ; i++) {
+		if (small.length > array[i].length) {
+			small = array[i];
+		}
+	}
+    return small;
 }
 
 var longestWord = function(array) {
