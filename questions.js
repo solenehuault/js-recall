@@ -226,7 +226,8 @@ var findAnagrams = function(string) {
 }
 
 var convertToCelsius = function(number) {
-    return 'Write your method here';
+	var result = Math.round((number - 32) / 1.8000);
+	return result;
 }
 
 var letterPosition = function(array) {
