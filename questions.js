@@ -65,8 +65,9 @@ var everyPossiblePair = function(array) {
 	return result.sort();
 }
 
-var allElementsExceptFirstThree = function(array) {
-    return 'Write your method here';
+var allElementsExceptFirstThree = function(array) {    
+	array.splice(0,3);
+	return array;
 }
 
 var addElementToBeginning = function(array, element) {
