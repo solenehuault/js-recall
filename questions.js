@@ -197,7 +197,9 @@ var formatDateNicely = function(date) {
 }
 
 var getDomainName = function(string) {
-    return 'Write your method here';
+	var index = string.indexOf("@");
+	var index_end = string.lastIndexOf(".");
+	return string.substring(index+1, index_end);
 }
 
 var titleize = function(string) {
