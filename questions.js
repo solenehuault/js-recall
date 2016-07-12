@@ -106,11 +106,17 @@ var shortestWord = function(array) {
 			small = array[i];
 		}
 	}
-    return small;
+	return small;
 }
 
 var longestWord = function(array) {
-    return 'Write your method here';
+	var long = array[0];
+	for (i = 0 ; i < array.length ; i++) {
+		if(long.length < array[i].length) {
+			long = array[i];
+		}
+	}
+	return long;
 }
 
 var sumNumbers = function(array) {
