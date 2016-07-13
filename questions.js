@@ -76,8 +76,14 @@ var addElementToBeginning = function(array, element) {
 }
 
 var sortByLastLetter = function(array) {
-	return array.sort(function(a,b) {
-		return a.charAt(a.length-1) - b.charAt(b.length-1);});
+	for (i = 0 ; i < array.length ; i++) {
+		array[i] = array[i].split("").reverse().join("");
+	}
+	array.sort();
+	for (i = 0 ; i < array.length ; i++) {
+		array[i] = array[i].split("").reverse().join("");
+	} 
+	return array;
 }
 
 var getFirstHalf = function(string) {
