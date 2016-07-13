@@ -205,7 +205,12 @@ var roundUp = function(number) {
 }
 
 var formatDateNicely = function(date) {
-    return 'Write your method here';
+	var result = [];
+	result.push("0" + date.getDate());
+	result.push("0" + (date.getMonth()+1));
+	result.push("20" + (date.getYear()-100));
+	result = result.join("/");
+	return result;
 }
 
 var getDomainName = function(string) {
@@ -219,7 +224,12 @@ var titleize = function(string) {
 }
 
 var checkForSpecialCharacters = function(string) {
-    return 'Write your method here';
+	for (i = 0 ; i < string.length ; i++) {	
+		if (!((string.charCodeAt(i) >= 65 && string.charCodeAt(i) <= 90) || (string.charCodeAt(i) >= 97 && string.charCodeAt(i) <= 122) || (string.charAt(i) >= 48 && string.charCodeAt(i) <= 57))) {
+			return true;
+		}
+	}
+	return false;
 }
 
 var squareRoot = function(number) {
