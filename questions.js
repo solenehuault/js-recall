@@ -191,7 +191,13 @@ var sumKeysAndValues = function(object) {
 }
 
 var removeCapitals = function(string) {
-    return 'Write your method here';
+	var result = [];
+	for (i = 0 ; i < string.length ; i++) {
+		if (!(string.charCodeAt(i) <= 90 && string.charCodeAt(i) >= 65)) {
+			result.push(string.charAt(i));
+		}
+	} 
+	return result.join("");
 }
 
 var roundUp = function(number) {
