@@ -177,10 +177,16 @@ var convertArrayToObject = function(array) {
 var getAllLetters = function(array) {
 	var listeChar = {};
 	for (var i = 0 ; i < array.length ; i++) {
-		var index = array[i];
-		listeChar[index] = "Coucou Toto !";
+		for (var j = 0 ; j < array[i].length ; j++) {
+			var index = array[i].charAt(j);
+			listeChar[index] = "";
+		}
 	}
-	return listeChar;
+	var result = [];
+	for (x in listeChar) {
+		result.push(x);
+	}
+	return result.sort();
 }
 
 var swapKeysAndValues = function(object) {
