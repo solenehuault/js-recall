@@ -166,9 +166,10 @@ var getElementsUntilGreaterThanFive = function(array) {
 }
 
 var convertArrayToObject = function(array) {
-	var result = [];
-	for (i = 0 ; i < array.length-1 ; i += 2) {
-		result[array[i]] = array[i+1];
+	var result = {};
+	for (var i = 0 ; i < array.length-1 ; i = i+2) {
+		var index = array[i];
+		result[index] = array[i+1];
 	}    
 	return result;
 }
@@ -192,7 +193,7 @@ var sumKeysAndValues = function(object) {
 
 var removeCapitals = function(string) {
 	var result = [];
-	for (i = 0 ; i < string.length ; i++) {
+	for (var i = 0 ; i < string.length ; i++) {
 		if (!(string.charCodeAt(i) <= 90 && string.charCodeAt(i) >= 65)) {
 			result.push(string.charAt(i));
 		}
@@ -246,7 +247,7 @@ var factorial = function(number) {
 }
 
 var findAnagrams = function(string) {
-    return 'Write your method here';
+	return 'Write your method here';
 }
 
 var convertToCelsius = function(number) {
