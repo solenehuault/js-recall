@@ -256,12 +256,8 @@ var squareRoot = function(number) {
 }
 
 var factorial = function(number) {
-	var result = 1;
-	if (number === 0) {return result;}
-	for (i = 1 ; i <= number ; i++) {
-		result *= i;
-	}
-	return result;
+	if (number === 0) {return (1);}
+	return (number * factorial(number-1));
 }
 
 var findAnagrams = function(string) {
