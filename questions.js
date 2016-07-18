@@ -237,7 +237,18 @@ var getDomainName = function(string) {
 }
 
 var titleize = function(string) {
-    return 'Write your method here';
+	var result = [];
+	var array = string.split(" ");
+	for (var i = 0 ; i < array.length ; i++) {
+		if ((array[i] !== "and" && array[i] !== "the") || i == 0 || array[i-1].charAt(array[i-1].length-1) === ".") {
+			var mot = array[i].charAt(0).toUpperCase();
+			result.push(mot + array[i].slice(1, array[i].length));
+		}
+		else {
+			result.push(array[i]);
+		}
+	}
+	return result.join(" "); 
 }
 
 var checkForSpecialCharacters = function(string) {
