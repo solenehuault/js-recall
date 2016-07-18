@@ -175,7 +175,7 @@ var convertArrayToObject = function(array) {
 }
 
 var getAllLetters = function(array) {
-	var listeChar = [];
+	var listeChar = {};
 	for (var i = 0 ; i < array.length ; i++) {
 		var index = array[i];
 		listeChar[index] = "Coucou Toto !";
@@ -193,7 +193,12 @@ var swapKeysAndValues = function(object) {
 }
 
 var sumKeysAndValues = function(object) {
-    return 'Write your method here';
+	var result = 0;
+	for (x in object) {
+		result = result + parseInt(x);
+		result = result + parseInt(object[x]);
+	}
+	return result;
 }
 
 var removeCapitals = function(string) {
