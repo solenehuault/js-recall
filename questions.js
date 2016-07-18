@@ -242,7 +242,9 @@ var titleize = function(string) {
 
 var checkForSpecialCharacters = function(string) {
 	for (i = 0 ; i < string.length ; i++) {	
-		if (!((string.charCodeAt(i) >= 65 && string.charCodeAt(i) <= 90) || (string.charCodeAt(i) >= 97 && string.charCodeAt(i) <= 122) || (string.charAt(i) >= 48 && string.charCodeAt(i) <= 57))) {
+		if (!((string.charCodeAt(i) >= 48 && string.charCodeAt(i) <= 57) || (string.charCodeAt(i) >= 65 && string.charCodeAt(i) <= 90) 
+			|| (string.charCodeAt(i) >= 97 && string.charCodeAt(i) <= 122))) {
+			console.log(string.charAt(i));
 			return true;
 		}
 	}
